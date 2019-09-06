@@ -153,6 +153,10 @@ open class SwipeCollectionViewCell: UICollectionViewCell {
     //   the collection view.
     /// :nodoc:
     open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if isHidden {
+            return nil
+        }
+        
         guard
           let actionsView = actionsView,
           isHidden == false
