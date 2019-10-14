@@ -335,7 +335,7 @@ class SwipeController: NSObject {
     
     func reset() {
         swipeable?.state = .center
-        
+        swipeable?.setNeedsLayout()
         swipeable?.actionsView?.removeFromSuperview()
         swipeable?.actionsView = nil
     }
